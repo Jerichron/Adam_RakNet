@@ -1,4 +1,4 @@
 ﻿  Main.cpp
-c:\users\jeric\desktop\adam_raknet\adam_raknet\adam-emptyraknet\adam-raknet-empty\adam-raknet-empty\main.cpp(613): warning C4477: 'printf' : format string '%I64u' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'RakNet::RakNetGUID'
+c:\users\jeric\desktop\adam_raknet\adam_raknet\adam-emptyraknet\adam-raknet-empty\adam-raknet-empty\main.cpp(649): warning C4477: 'printf' : format string '%I64u' requires an argument of type 'unsigned __int64', but variadic argument 1 has type 'RakNet::RakNetGUID'
   Adam-Raknet-Empty.vcxproj -> C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Adam-EmptyRaknet\Adam-Raknet-Empty\Debug\Adam-Raknet-Empty.exe
   Adam-Raknet-Empty.vcxproj -> C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Adam-EmptyRaknet\Adam-Raknet-Empty\Debug\Adam-Raknet-Empty.pdb (Partial PDB)
