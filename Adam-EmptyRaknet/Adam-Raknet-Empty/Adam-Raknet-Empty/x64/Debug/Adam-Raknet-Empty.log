@@ -1,0 +1,1 @@
+﻿RakNet_VS2008_LibStatic_Debug_Win32.lib(BitStream.obj) : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'
