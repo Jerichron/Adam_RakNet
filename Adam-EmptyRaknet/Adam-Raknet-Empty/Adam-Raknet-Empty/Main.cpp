@@ -10,7 +10,7 @@
 
 static int SERVER_PORT = 65000;
 static int CLIENT_PORT = 65001;
-static int MAX_CONNECTIONS = 2;
+static int MAX_CONNECTIONS = 3;
 static char ip[64] = "192.168.75.1";
 
 RakNet::SystemAddress g_serverAddress;
@@ -247,6 +247,15 @@ void OnPlayerTurn(RakNet::Packet* packet)
 
 void OnPlayerWaiting(RakNet::Packet* packet)
 {
+	//RakNet::BitStream bs(packet->data, packet->length, false);
+	//RakNet::MessageID msgID;
+	//bs.Read(msgID);
+	//RakNet::RakString name;
+	//bs.Read(name);
+	//std::cout << name.C_String() << " is up!" << std::endl;
+
+	//-----------------------------------------------------
+
 	char userInput[255];
 	RakNet::BitStream bs(packet->data, packet->length, false);
 	RakNet::MessageID msgID;
@@ -257,16 +266,6 @@ void OnPlayerWaiting(RakNet::Packet* packet)
 	std::cout << "input s to see other players info" << std::endl;
 	std::cin >> userInput;
 	RakNet::BitStream bsAction;
-
-	bool validInput = false;
-	while (!validInput)
-	{
-		// Get input
-		std::cin >> userInput;
-		validInput = userInput[0] == 's';
-		if (!validInput)
-			std::cout << "Not valid input - Please enter 's'." << std::endl;
-	}
 
 	isServer = userInput[0] == 's';
 
