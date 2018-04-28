@@ -44,7 +44,7 @@ public class CTFGameManager : NetworkBehaviour
     public void SpawnPowerUps()
     {
         //attackP
-        if (GameObject.FindGameObjectWithTag("Pattack") == null)
+        if (GameObject.FindGameObjectWithTag("Jump") == null)
         {
             int r = Random.Range(1, 4);
             Vector3 spawnLoc = new Vector3();
@@ -70,7 +70,7 @@ public class CTFGameManager : NetworkBehaviour
             NetworkServer.Spawn(PowerAttack);
         }
         //defenseP
-        if (GameObject.FindGameObjectWithTag("Pdefense") == null)
+        if (GameObject.FindGameObjectWithTag("Speed") == null)
         {
             int r = Random.Range(1, 4);
             Vector3 spawnLoc = new Vector3();
