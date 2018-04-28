@@ -12,14 +12,13 @@ public class TransformMessage : MessageBase
 
 public class CustomNetworkTransformUpdate : NetworkBehaviour
 {
-
     public float m_updateTransformTime = 0.25f;
     private float m_currentUpdateTransformTime = 0.0f;
-
     NetworkClient m_client;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         m_client = isServer ? null : NetworkManager.singleton.client;
 
         //only replicas need to listen for transform updates
@@ -36,9 +35,10 @@ public class CustomNetworkTransformUpdate : NetworkBehaviour
             }
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         m_currentUpdateTransformTime += Time.deltaTime;
         if (m_currentUpdateTransformTime > m_updateTransformTime)
         {

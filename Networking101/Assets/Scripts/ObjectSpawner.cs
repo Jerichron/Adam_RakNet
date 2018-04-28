@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.AI;
 using UnityEngine.Networking;
 
-public class ObjectSpawner : NetworkBehaviour {
+public class ObjectSpawner : NetworkBehaviour
+{
 
     public GameObject m_playerPrefab = null;
     public GameObject m_flagPrefab = null;
@@ -18,7 +19,7 @@ public class ObjectSpawner : NetworkBehaviour {
         for (int i = 0; i < 30; i++)
         {
             Vector2 randPoint = Random.insideUnitCircle;
-            Vector3 randomPoint = center + new Vector3(randPoint.x,randPoint.y,center.z) * range;
+            Vector3 randomPoint = center + new Vector3(randPoint.x, randPoint.y, center.z) * range;
             NavMeshHit hit;
             if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
             {
@@ -39,20 +40,21 @@ public class ObjectSpawner : NetworkBehaviour {
             GameObject clone = (GameObject)Instantiate(objectToSpawn, spawnPoint, rotation);
             return true;
         }
-        
+
         Debug.Log("Could not find point to spawn");
         return false;
     }
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-        //SpawnObject(m_playerPrefab);
-			//SpawnObject (m_flagPrefab, m_range);
+        SpawnObject(m_playerPrefab, m_range);
+        SpawnObject(m_flagPrefab, m_range);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }
