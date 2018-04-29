@@ -9,6 +9,7 @@ public class CTFNetworkManager : NetworkManager
     public Canvas StartScreen;
     public Button Host_Game;
     public Button Join_Game;
+    public Button Show_Tutorial;
     public Button Quit_Game;
     public GameObject Text;
 
@@ -46,6 +47,8 @@ public class CTFNetworkManager : NetworkManager
         StartScreen.enabled = false;
         Host_Game.enabled = false;
         Join_Game.enabled = false;
+        Quit_Game.enabled = false;
+        Show_Tutorial.enabled = false;
     }
 
     public override void OnClientConnect(NetworkConnection conn)
@@ -55,6 +58,8 @@ public class CTFNetworkManager : NetworkManager
         StartScreen.enabled = false;
         Host_Game.enabled = false;
         Join_Game.enabled = false;
+        Quit_Game.enabled = false;
+        Show_Tutorial.enabled = false;
     }
 
     public override void OnClientDisconnect(NetworkConnection conn)
@@ -62,9 +67,4 @@ public class CTFNetworkManager : NetworkManager
         base.OnClientDisconnect(conn);
         Debug.Log("OnClientDisconnect NumPlayers" + this.numPlayers);
     }
-
-    //public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId, NetworkReader extraMessageReader)
-    //{
-    //m_gameManager.ActivePlayers = this.numPlayers;
-    //}
 }

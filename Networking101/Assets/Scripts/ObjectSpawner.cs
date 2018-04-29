@@ -7,7 +7,6 @@ using UnityEngine.Networking;
 
 public class ObjectSpawner : NetworkBehaviour
 {
-
     public GameObject m_playerPrefab = null;
     public GameObject m_flagPrefab = null;
     public Text m_timerText = null;

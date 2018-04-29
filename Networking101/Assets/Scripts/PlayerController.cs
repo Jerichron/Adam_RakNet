@@ -8,15 +8,14 @@ public class CustomMsgType
     public static short Transform = MsgType.Highest + 1;
 };
 
-
 public class PlayerController : NetworkBehaviour
 {
     public float m_linearSpeed = 5.0f;
     public float m_angularSpeed = 3.0f;
     public float m_jumpSpeed = 0.0f;
 
-    public bool attackBuff = false;
-    public bool defenseBuff = false;
+    public bool speedActive = false;
+    public bool jumpActive = false;
 
     [SyncVar]
     public bool flagAttached = false;
@@ -50,28 +49,22 @@ public class PlayerController : NetworkBehaviour
     public override void OnStartAuthority()
     {
         base.OnStartAuthority();
-        //Debug.Log("OnStartAuthority()");
     }
 
     public override void OnStartClient()
     {
         base.OnStartClient();
-        //Debug.Log("OnStartClient()");
     }
 
     public override void OnStartLocalPlayer()
     {
         base.OnStartLocalPlayer();
-        //Camera.main.transform.parent = this.transform;
-        //Camera.main.GetComponent<CamFollow>().target = this.transform;
-        //Debug.Log("OnStartLocalPlayer()");
         GetComponent<MeshRenderer>().material.color = new Color(0.0f, 1.0f, 0.0f);
     }
 
     public override void OnStartServer()
     {
         base.OnStartServer();
-        //Debug.Log("OnStartServer()");
     }
 
     public void Jump()
@@ -96,13 +89,13 @@ public class PlayerController : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (attackBuff == true)
-        {
-            StartCoroutine("AttackBuff");
-        }
-        if (defenseBuff == true)
+        if (speedActive == true)
         {
             StartCoroutine("DefenseBuff");
+        }
+        if (jumpActive == true)
+        {
+            StartCoroutine("AttackBuff");
         }
         if (!isLocalPlayer)
         {
@@ -138,7 +131,7 @@ public class PlayerController : NetworkBehaviour
         yield return new WaitForSeconds(10.0f);
         m_jumpSpeed = 0.0f;
         GetComponent<ParticleSystem>().Stop();
-        attackBuff = false;
+        speedActive = false;
     }
     public IEnumerator DefenseBuff()
     {
@@ -146,15 +139,13 @@ public class PlayerController : NetworkBehaviour
         yield return new WaitForSeconds(10.0f);
         m_linearSpeed = 5.0f;
         GetComponent<ParticleSystem>().Stop();
-        defenseBuff = false;
+        jumpActive = false;
     }
 
     public void OnTriggerEnter(Collider c)
     {
-        Debug.Log("test1");
         if (c.gameObject.tag == "Player")
         {
-            Debug.Log("test2");
             if (GameObject.FindGameObjectWithTag("flag") != null)
             {
                 GameObject.FindGameObjectWithTag("flag").GetComponent<Flag>().m_state = Flag.State.Removed;

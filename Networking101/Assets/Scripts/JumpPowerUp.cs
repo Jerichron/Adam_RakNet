@@ -28,7 +28,7 @@ public class JumpPowerUp : NetworkBehaviour
 
     public void ActivatePowerUpA(GameObject obj)
     {
-        obj.GetComponent<PlayerController>().attackBuff = true;
+        obj.GetComponent<PlayerController>().jumpActive = true;
         ParticleSystem p = obj.GetComponent<ParticleSystem>();
         var main = p.main;
         main.startColor = Color.red;

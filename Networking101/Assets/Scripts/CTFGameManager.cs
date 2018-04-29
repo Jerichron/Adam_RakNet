@@ -204,7 +204,7 @@ public class CTFGameManager : NetworkBehaviour
                 SpawnFlag();
                 InvokeRepeating("SpawnPowerUps", 0.1f, 10.0f);
                 Players = GameObject.FindGameObjectsWithTag("Player");
-                //change state to ingame
+                //Start game
                 m_gameState = CTF_GameState.GS_InGame;
             }
         }

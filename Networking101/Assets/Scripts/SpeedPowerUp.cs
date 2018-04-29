@@ -28,7 +28,7 @@ public class SpeedPowerUp : NetworkBehaviour
 
     public void ActivatePowerUpD(GameObject obj)
     {
-        obj.GetComponent<PlayerController>().defenseBuff = true;
+        obj.GetComponent<PlayerController>().speedActive = true;
         ParticleSystem p = obj.GetComponent<ParticleSystem>();
         var main = p.main;
         main.startColor = Color.blue;
