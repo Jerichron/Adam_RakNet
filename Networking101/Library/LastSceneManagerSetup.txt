@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/Jeric/Desktop/RakNetPatrique-UnityFinalAssignment/MultiplayerFinalAssignment/Assets/Assets/scenes/Networking.unity
+- path: Assets/Scenes/Final.unity
   isLoaded: 1
   isActive: 1

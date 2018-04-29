@@ -9,6 +9,13 @@ public class CTFNetworkManager : NetworkManager
     public Canvas StartScreen;
     public Button Host_Game;
     public Button Join_Game;
+    public Button Quit_Game;
+    public GameObject Text;
+
+    public void Start()
+    {
+        Text.SetActive(false);
+    }
 
     public void StartupHost()
     {
@@ -20,7 +27,14 @@ public class CTFNetworkManager : NetworkManager
         SetPort();
         NetworkManager.singleton.StartClient();
     }
-
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    public void Tutorial()
+    {
+        Text.SetActive(true);
+    }
     void SetPort()
     {
         NetworkManager.singleton.networkPort = 7777;
