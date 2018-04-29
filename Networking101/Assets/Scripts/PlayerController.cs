@@ -31,7 +31,6 @@ public class PlayerController : NetworkBehaviour
     void Start()
     {
         m_rb = GetComponent<Rigidbody>();
-        //Debug.Log("Start()");
         if (isServer)
         {
             Vector3 spawnPoint = new Vector3(-25.0f, 1.0f, 0.0f);
@@ -42,8 +41,6 @@ public class PlayerController : NetworkBehaviour
             Vector3 spawnPoint = new Vector3(25.0f, 1.0f, 0.0f);
             this.transform.position = spawnPoint;
         }
-
-
     }
 
     public override void OnStartAuthority()
@@ -69,8 +66,11 @@ public class PlayerController : NetworkBehaviour
 
     public void Jump()
     {
-        Vector3 jumpVelocity = Vector3.up * m_jumpSpeed;
-        m_rb.velocity += jumpVelocity;
+        if (m_rb.velocity.y == 0.0f)
+        {
+            Vector3 jumpVelocity = Vector3.up * m_jumpSpeed;
+            m_rb.velocity += jumpVelocity;
+        }
     }
 
     [ClientRpc]
@@ -127,7 +127,7 @@ public class PlayerController : NetworkBehaviour
 
     public IEnumerator AttackBuff()
     {
-        m_jumpSpeed = 6.0f;
+        m_jumpSpeed = 10.0f;
         yield return new WaitForSeconds(10.0f);
         m_jumpSpeed = 0.0f;
         GetComponent<ParticleSystem>().Stop();
@@ -146,9 +146,9 @@ public class PlayerController : NetworkBehaviour
     {
         if (c.gameObject.tag == "Player")
         {
-            if (GameObject.FindGameObjectWithTag("flag") != null)
+            if (GameObject.FindGameObjectWithTag("Flag") != null)
             {
-                GameObject.FindGameObjectWithTag("flag").GetComponent<Flag>().m_state = Flag.State.Removed;
+                GameObject.FindGameObjectWithTag("Flag").GetComponent<Flag>().m_state = Flag.State.Removed;
                 flagAttached = false;
             }
         }
