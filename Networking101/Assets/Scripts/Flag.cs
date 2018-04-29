@@ -55,7 +55,6 @@ public class Flag : NetworkBehaviour
     {
         if (m_state == State.Removed)
         {
-            Debug.Log("test3");
             this.transform.parent = null;
             this.transform.position = Vector3.zero;
             m_state = State.Available;

@@ -43,7 +43,7 @@ public class CTFGameManager : NetworkBehaviour
 
     public void SpawnPowerUps()
     {
-        //attackP
+        //Jump power up.
         if (GameObject.FindGameObjectWithTag("Jump") == null)
         {
             int r = Random.Range(1, 4);
@@ -66,10 +66,10 @@ public class CTFGameManager : NetworkBehaviour
                     Debug.Log("Error");
                     break;
             }
-            GameObject PowerAttack = Instantiate(m_JumpPowerUp, spawnLoc, new Quaternion());
-            NetworkServer.Spawn(PowerAttack);
+            GameObject JumpPowerUp = Instantiate(m_JumpPowerUp, spawnLoc, new Quaternion());
+            NetworkServer.Spawn(JumpPowerUp);
         }
-        //defenseP
+        //Speed power up.
         if (GameObject.FindGameObjectWithTag("Speed") == null)
         {
             int r = Random.Range(1, 4);
@@ -92,8 +92,8 @@ public class CTFGameManager : NetworkBehaviour
                     Debug.Log("Error");
                     break;
             }
-            GameObject PowerDefense = Instantiate(m_SpeedPowerUp, spawnLoc, new Quaternion());
-            NetworkServer.Spawn(PowerDefense);
+            GameObject SpeedPowerUp = Instantiate(m_SpeedPowerUp, spawnLoc, new Quaternion());
+            NetworkServer.Spawn(SpeedPowerUp);
         }
     }
     bool IsNumPlayersReached()

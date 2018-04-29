@@ -63,12 +63,6 @@ public class CustomNetworkTransformUpdate : NetworkBehaviour
     public void OnTransformReceived(NetworkMessage netMsg)
     {
         TransformMessage msg = netMsg.ReadMessage<TransformMessage>();
-        //Debug.Log("OnTransformReceived: IsLocalPlayer:" + isLocalPlayer);
-        //Debug.Log("NetID: " + msg.netID);
-        //Debug.Log("MSGPOS: " + msg.position);
-        //Debug.Log("OURNETID: " + this.netId.Value);
-
-
         //we are the replica of a an object on another machine
         //that object sent out a msg to update our position
         if (msg.netID == this.netId.Value)

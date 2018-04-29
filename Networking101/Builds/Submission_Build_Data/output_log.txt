@@ -1,0 +1,96 @@
+Initialize engine version: 5.6.2f1 (a2913c821e27)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     2017 MB
+    Driver:   22.21.13.8205
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.023 seconds
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+The referenced script on this Behaviour (Game Object 'MainCamera') is missing!
+ 
+(Filename:  Line: 1743)
+
+UnloadTime: 2.505086 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 2ca0 -> priority: 1 
+  Thread -> id: ce4 -> priority: 1 
+  Thread -> id: c18 -> priority: 1 
+  Thread -> id: 4cb0 -> priority: 1 
+Initialize engine version: 5.6.2f1 (a2913c821e27)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     2017 MB
+    Driver:   22.21.13.8205
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.020 seconds
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Jeric\Desktop\Adam_RakNet\Adam_RakNet\Networking101\Builds\Submission_Build_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+The referenced script on this Behaviour (Game Object 'MainCamera') is missing!
+ 
+(Filename:  Line: 1743)
+
+UnloadTime: 1.978469 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 4654 -> priority: 1 
+  Thread -> id: 1e58 -> priority: 1 
+  Thread -> id: 2900 -> priority: 1 
+  Thread -> id: 17bc -> priority: 1 
+OnServerConnect NumPlayers:0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+OnClientConnect NumPlayers:1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+OnServerConnect NumPlayers:1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+OnClientConnect NumPlayers:0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Register Handler Netid: 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Register Handler Netid: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
